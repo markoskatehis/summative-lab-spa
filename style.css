@@ -11,6 +11,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     padding: 20px;
 }
@@ -26,6 +27,13 @@ header h1 {
     font-size: 2rem;
     color: #0077cc;
     margin-bottom: 10px;
+}
+
+#bottom-button {
+    margin-top: auto;
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
 }
 
 #theme-toggle {
