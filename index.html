@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Summative Lab: Wordly</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Language Learning App</h1>
+        <button id="theme-toggle">Change Theme</button>
+    </header>
+
+    <main>
+        <form id="search-form">
+            <input type="text" id="search-input" placeholder="Enter a word" required>
+            <button type="submit">Search</button>
+        </form>
+
+        <p id="error-message" class="hidden"></p>
+
+        <section id="results">
+            <h2 id="word-title"></h2>
+            <p id="pronunciation"></p>
+            <audio id="audio" controls class="hidden"></audio>
+
+            <div id="definitions"></div>
+            <div id="synonyms"></div>
+
+            <button id="save-btn" class="hidden">Save Word</button>
+        </section>
+
+        <aside>
+            <h3>Saved Words</h3>
+            <ul id="favorites"></ul>
+        </aside>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
