@@ -1,34 +1,84 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
-    padding: 20px;
-    background: #f9f9f9;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: #f4f6f9;
     color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #0077cc;
+    margin-bottom: 10px;
+}
+
+#theme-toggle {
+    background: #0077cc;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#theme-toggle:hover {
+    background: #005fa3;
+}
+
+main {
+    width: 100%;
+    max-width: 800px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 #search-form {
-    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 #search-input {
-    padding: 8px;
-    width: 250px;
+    flex: 1;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+#search-input:focus {
+    border-color: #0077cc;
 }
 
 button {
-    padding: 8px 12px;
-    margin-left: 5px;
+    padding: 10px 16px;
     cursor: pointer;
     border: none;
     background: #0077cc;
-    color: white;
-    border-radius: 4px;
+    color: #fff;
+    border-radius: 6px;
     transition: background 0.3s;
 }
 
@@ -38,37 +88,102 @@ button:hover {
 
 #results {
     margin-top: 20px;
-    padding: 10px;
-    cursor: pointer;
+    padding: 15px;
+    background: #fafafa;
+    border-radius: 10px;
+}
+
+#word-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#pronunciation {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+audio {
+    margin: 10px 0;
+}
+
+#definitions h3, #synonyms h3 {
+    font-size: 1.1rem;
+    color: #0077cc;
+    margin-bottom: 5px;
+}
+
+aside {
+    margin-top: 30px;
+}
+
+aside h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #0077cc;
+}
+
+#favorites {
+    list-style: none;
+    padding: 0;
 }
 
 #favorites li {
-    margin: 5px 0;
-    padding: 5px;
-    cursor: pointer;
+    padding: 8px 12px;
+    background: #eef7ff;
+    margin-bottom: 6px;
+    border-radius: 6px;
+    transition: background 0.3s;
 }
 
 #favorites li:hover {
-    background: #e0f7fa;
+    background: #d8edff;
 }
 
 .saved {
-    background: yellow
+    background: #fffa8b;
+}
+
+#error-message {
+    color: #d32f2f;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .hidden {
-    display: none
+    display: none;
 }
 
 .dark {
-    background: #222;
-    color: #eee
+    background: #1e1e1e;
+    color: #eee;
+}
+
+.dark main {
+    background: #2a2a2a;
+}
+
+.dark #results {
+    background: #3a3a3a;
+    color: #eee;
+}
+
+.dark #search-input {
+    background: #333;
+    color: #eee;
+    border: 1px solid #555;
 }
 
 .dark button {
     background: #444;
 }
 
-.dark button.hover {
+.dark button:hover {
     background: #666;
+}
+
+.dark #favorites li {
+    background: #333;
 }
